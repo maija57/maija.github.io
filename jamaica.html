@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ямайка - Путівник</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-pink-100 text-blue-900 font-roboto">
+  <nav class="fixed top-0 w-full bg-blue-900 text-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Путівник</h1>
+      <div class="space-x-4">
+        <a href="index.html" class="hover:text-pink-300 transition">Головна</a>
+        <a href="offers.html" class="hover:text-pink-300 transition">Пропозиції</a>
+        <a href="alaska.html" class="hover:text-pink-300 transition">Аляска</a>
+        <a href="tokyo.html" class="hover:text-pink-300 transition">Токіо</a>
+        <a href="jamaica.html" class="hover:text-pink-300 transition">Ямайка</a>
+        <button id="registerBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded transition">Реєстрація/Вхід</button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="registerModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div class="flex justify-between mb-4">
+        <button id="showRegister" class="text-blue-900 hover:text-pink-500 font-bold">Реєстрація</button>
+        <button id="showLogin" class="text-blue-900 hover:text-pink-500">Вхід</button>
+      </div>
+      <div id="registerFormContainer">
+        <h2 class="text-2xl font-bold mb-4 text-blue-900">Реєстрація</h2>
+        <form id="registerForm" class="space-y-4">
+          <div>
+            <label for="regName" class="block text-sm font-medium">Ім'я</label>
+            <input type="text" id="regName" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+          </div>
+          <div>
+            <label for="regEmail" class="block text-sm font-medium">Електронна пошта</label>
+            <input type="email" id="regEmail" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+          </div>
+          <div>
+            <label for="regPassword" class="block text-sm font-medium">Пароль</label>
+            <input type="password" id="regPassword" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+          </div>
+          <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white p-2 rounded transition">Зареєструватися</button>
+        </form>
+      </div>
+      <div id="loginFormContainer" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-blue-900">Вхід</h2>
+        <form id="loginForm" class="space-y-4">
+          <div>
+            <label for="loginEmail" class="block text-sm font-medium">Електронна пошта</label>
+            <input type="email" id="loginEmail" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+          </div>
+          <div>
+            <label for="loginPassword" class="block text-sm font-medium">Пароль</label>
+            <input type="password" id="loginPassword" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+          </div>
+          <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white p-2 rounded transition">Увійти</button>
+        </form>
+      </div>
+      <button id="closeModal" class="mt-4 text-blue-900 hover:text-pink-500">Закрити</button>
+    </div>
+  </div>
+
+  <section class="min-h-screen flex items-center justify-center pt-24">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Відпочинок на Ямайці</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <img src="https://cdn.pixabay.com/photo/2020/04/29/18/36/jamaica-5110094_1280.jpg" alt="Jamaica" class="w-full h-64 object-cover rounded-lg shadow-md mb-4">
+          <h2 class="text-xl">Острів Ямайка – один із найбільш музичних островів на землі.</h2>
+        </div>
+        <div>
+          <img src="https://zp.more-turov.com.ua/ckfinder/userfiles/files/Jamaica-1/jamaika-5-800.jpg" alt="Jamaica Lifestyle" class="w-full h-64 object-cover rounded-lg shadow-md mb-4">
+          <h2 class="text-xl">Місцеві жителі віддають перевагу неквапливому та безтурботному життю.</h2>
+        </div>
+        <div>
+          <img src="https://triplook.me/media/countries/photo/e/c/b7.jpg" alt="Jamaica Tourism" class="w-full h-64 object-cover rounded-lg shadow-md mb-4">
+          <h2 class="text-xl">Це сонячне та гостинне місце, яке щороку нарощує обсяги туристичного потоку.</h2>
+        </div>
+      </div>
+      <h3 class="text-xl mb-4">Ямайка — перша земля, відкрита Христофором Колумбом під час його другої подорожі в пошуках Індії.</h3>
+      <h3 class="text-xl mb-4">Він побачив Блакитні гори Ямайки, які завдяки туману, дійсно здаються блакитними.</h3>
+      <h3 class="text-xl mb-8">Назва острову перекладається, як острів джерел.</h3>
+      <h2 class="text-2xl font-bold mb-4">Маршрут тура:</h2>
+      <ul class="list-disc list-inside mb-8">
+        <li class="flex items-center">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/78/f5/97/over-the-water-private.jpg?w=1200&h=1200&s=1" alt="Montego Bay" class="w-24 h-24 object-cover rounded-lg mr-4">
+          Монтего-Бей
+        </li>
+        <li class="flex items-center">
+          <img src="https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/ocho-rios.jpg" alt="Ocho Rios" class="w-24 h-24 object-cover rounded-lg mr-4">
+          Очо-Ріос
+        </li>
+        <li class="flex items-center">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/243568771.jpg?k=5f8d67c17d0d998db592a26c8f02e57cca38ea1ba1faf2d01d2e1416b13673e6&o=&hp=1" alt="Kingston" class="w-24 h-24 object-cover rounded-lg mr-4">
+          Кінгстон
+        </li>
+        <li class="flex items-center">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ac/80/90/view.jpg?w=900&h=500&s=1" alt="Runaway Bay" class="w-24 h-24 object-cover rounded-lg mr-4">
+          Раневей-Бей
+        </li>
+      </ul>
+      <h2 class="text-2xl font-bold mb-4">Зв’яжіться з нами:</h2>
+      <div class="flex justify-center space-x-4">
+        <a href="https://www.facebook.com/turfirmafiesta/?locale=ru_RU" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook" class="w-16 hover:opacity-80 transition">
+        </a>
+        <a href="https://www.instagram.com/tourmydream/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" class="w-16 hover:opacity-80 transition">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const registerBtn = document.getElementById('registerBtn');
+    const registerModal = document.getElementById('registerModal');
+    const closeModal = document.getElementById('closeModal');
+    const showRegister = document.getElementById('showRegister');
+    const showLogin = document.getElementById('showLogin');
+    const registerFormContainer = document.getElementById('registerFormContainer');
+    const loginFormContainer = document.getElementById('loginFormContainer');
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+
+    registerBtn.addEventListener('click', () => {
+      registerModal.classList.remove('hidden');
+      registerFormContainer.classList.remove('hidden');
+      loginFormContainer.classList.add('hidden');
+    });
+
+    closeModal.addEventListener('click', () => {
+      registerModal.classList.add('hidden');
+    });
+
+    registerModal.addEventListener('click', (e) => {
+      if (e.target === registerModal) {
+        registerModal.classList.add('hidden');
+      }
+    });
+
+    showRegister.addEventListener('click', () => {
+      registerFormContainer.classList.remove('hidden');
+      loginFormContainer.classList.add('hidden');
+    });
+
+    showLogin.addEventListener('click', () => {
+      loginFormContainer.classList.remove('hidden');
+      registerFormContainer.classList.add('hidden');
+    });
+
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('regName').value;
+      const email = document.getElementById('regEmail').value;
+      const password = document.getElementById('regPassword').value;
+
+      if (name && email && password) {
+        alert('Реєстрація успішна! Ласкаво просимо, ' + name + '!');
+        registerModal.classList.add('hidden');
+        registerForm.reset();
+      } else {
+        alert('Будь ласка, заповніть усі поля.');
+      }
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      if (email && password) {
+        alert('Вхід успішний! Ласкаво просимо!');
+        registerModal.classList.add('hidden');
+        loginForm.reset();
+      } else {
+        alert('Будь ласка, заповніть усі поля.');
+      }
+    });
+  </script>
+</body>
+</html>
