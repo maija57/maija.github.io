@@ -6,11 +6,21 @@
   <title>Токіо - Путівник</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 <body class="bg-pink-100 text-blue-900 font-roboto">
   <nav class="fixed top-0 w-full bg-blue-900 text-white shadow-md z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Путівник</h1>
+      <h1 class="text-2xl font-bold flex items-center">
+        <img src="logo.gif" alt="Логотип Путівник" class="w-16 h-16 mr-3"> <!-- GIF 64x64 -->
+        Путівник
+      </h1>
       <div class="space-x-4">
         <a href="index.html" class="hover:text-pink-300 transition">Головна</a>
         <a href="offers.html" class="hover:text-pink-300 transition">Пропозиції</a>
